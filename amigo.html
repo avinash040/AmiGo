@@ -1,82 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>AmiGO</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 80px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-</style>
-
-</head>
-<body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Amigo</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="amigo.html">Home</a></li>
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact_us.html">Contact Us</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container">
-<a href="#" class="fa fa-reddit"></a>
-<a href="#" class="fa fa-facebook"></a>
-
-</div>
-
-<div class="container">
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text">$</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <div class="input-group-append">
-    <span class="input-group-text">.00</span>
-  </div>
-</div>
-</div>
-
-<div class="container">
-<img src="assets/IMG_1840.jpg" class="img-fluid" alt="Responsive image">
-<img src="assets/IMG_2124.jpg" class="img-fluid" alt="Responsive image">
-<img src="assets/amigoLogo.png" class="img-fluid" alt="Responsive image">
-</div>
-
-
-</body>
+   <head>
+      <title>AmiGO</title>
+      <meta charset="utf-8">
+      <!-- --> 
+      <!-- setting the initial view port, with initial-scale=1 that works for mobile devices --> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- importing the bootstrap css script--> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- importing jquery--> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- importing popper js--> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <!-- importing font-awesome used for hte social media icons--> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- the css styling is stored in a different file--> 
+      <link href="style.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="container-fluid">
+      <!-- Navigation --> 
+      <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="#">Amigo</a>
+         </div>
+         <ul class="nav navbar-nav">
+            <li class="active"><a href="amigo.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+         </ul>
+         <form class="navbar-form navbar-left">
+            <div class="form-group">
+               <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+         </form>
+      </nav>
+      <div class="row">
+         <div class="col-md-4">
+            <h1>
+            Welcome to Amigo 
+            <h1>
+            <h4> A peer to peer ridesharing service for people associated with University of Ottawa. AmiGO intends to provide you a platform where active students or staff can share their rideshare details in a safer way. </h4>
+         </div>
+         <div class="col-md-3">
+            <a href="#" class=logo><img src="assets/amigoLogo.png" alt="AmigoLogo" height="200" width="200"></a>
+         </div>
+         <div class="col-md-5">
+            <!-- social media buttons --> 
+            <h1> Please find the latest news about us on social media </h1>
+            <a href="https://www.reddit.com" class="fa fa-reddit"> </a>
+            <a href="https://www.facebook.com" class="fa fa-facebook"> </a>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="radio">
+                <label><input type="radio" name="optradio" checked>Driver</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">Passenger</label>
+            </div>
+            </br>
+            <div data-role="rangeslider">
+               <label for="price-min">Price - choose between $10 and $200</label>
+               <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+            </div>
+            </br>
+            <div id="destination">
+               <b>Your Destination: </b>
+               <input name="end" id='end' type="text">
+               <button id="go">Go</button>
+            </div>
+         </div>
+         <div class="col-md-8">
+            <!-- google maps script --> 
+            <div id="map"></div>
+            <script>
+               function initMap() {
+                 var directionsService = new google.maps.DirectionsService;
+                 var directionsDisplay = new google.maps.DirectionsRenderer;
+                 var map = new google.maps.Map(document.getElementById('map'), {
+                   zoom: 14,
+                   center: {lat: 45.42, lng: -75.68}
+                 });
+                 directionsDisplay.setMap(map);
+               
+                 
+                 var onChangeHandler = function() {
+                   calculateAndDisplayRoute(directionsService, directionsDisplay);
+                 };
+               
+               
+                 document.getElementById('go').addEventListener('click', onChangeHandler);
+               }
+               
+               function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+                 directionsService.route({
+                   origin: "75 Laurier Ave E, Ottawa, ON K1N 6N5",//document.getElementById('start').value,
+                   destination: document.getElementById('end').value,
+                   travelMode: 'DRIVING'
+                 }, function(response, status) {
+                   if (status === 'OK') {
+                     directionsDisplay.setDirections(response);
+                   } else {
+                     window.alert('Directions request failed due to ' + status);
+                   }
+                 });
+               }
+            </script>
+            <script async defer
+               src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8jUQJRa0wusrFNyA7kuZx091AmhkydL0&callback=initMap"></script>
+         </div>
+      </div>
+   </body>
 </html>
-
