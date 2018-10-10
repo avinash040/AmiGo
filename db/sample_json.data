@@ -1,0 +1,62 @@
+{
+  "Users": {
+    "Drivers": [
+      {
+        "id": "1",
+        "firstName": "Tom",
+        "lastName": "Cruise",
+        "photo": "",
+        "start": "Ottawa",
+        "destination": "Toronto",
+        "time": "4:30",
+        "price": "50",
+        "rating": "5"
+      },
+      {
+        "id": "2",
+        "firstName": "Claudia",
+        "lastName": "Sharapova",
+        "photo": "",
+        "start": "Ottawa",
+        "destination": "Montreal",
+        "time": "4:30",
+        "price": "50",
+        "rating": "5"
+      },
+      {
+        "id": "3",
+        "firstName": "Robert",
+        "lastName": "Downey Jr.",
+        "photo": "",
+        "start": "Ottawa",
+        "destination": "Kingston",
+        "time": "4:30",
+        "price": "50",
+        "rating": "5"
+      }
+    ],
+    "Riders": [
+        {
+        "id": "1",
+        "firstName": "Tom",
+        "lastName": "Cruise",
+        "photo": "",
+        "rating": "5"
+        },
+        {
+        "id": "2",
+        "firstName": "Claudia",
+        "lastName": "Sharapova",
+        "photo": "",
+        "rating": "5"
+        },
+        {
+        "id": "3",
+        "firstName": "Robert",
+        "lastName": "Downey Jr.",
+        "photo": "",
+        "rating": "5"
+        }
+    ]
+  }
+}
